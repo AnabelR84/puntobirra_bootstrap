@@ -1,0 +1,319 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cabin:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cabin:ital@0;1&family=Caveat:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root{
+    --fuente-cursiva: "Caveat", cursive;
+    --fuente-minuscula: "Tajawal", sans-serif;
+    --color-header:  #124559;
+    --color-main: #eff6e0;
+    --color-footer: #01161e;
+}
+
+
+
+.logo {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+    max-width: 120px;
+    width: auto; /* Tamaño inicial del logo */  
+    z-index: 2;
+    position: relative;
+}
+
+.logo:hover {
+    opacity: 0.9; /* Reduce la opacidad para dar un efecto visual */
+    filter: brightness(1.2);
+} 
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+  
+}
+
+/*----------------------------------------------------------------------------*/
+
+ /* Estilos del header */
+header {
+  width: 100%;
+  padding-top: 15px;
+  background-color: var(--color-header);
+  color: black;
+  overflow: hidden; /* Prevenir desbordamiento */
+}
+
+/* Contenedor del menú */
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* Permitir ajuste en pantallas pequeñas */
+  position: relative;
+  z-index: 1; /* Asegurar que el menú esté encima de otros elementos */
+}
+
+/* Estilos del logo */
+.logo {
+  max-width: 150px; /* Ajusta según el diseño */
+  height: auto; /* Mantiene las proporciones */
+  display: inline-block; /* Asegura que se muestre correctamente */
+  margin: 0; /* Elimina márgenes por defecto */
+}
+
+/* Lista de navegación */
+.menu-list {
+  list-style: none;
+  gap: 5rem; /* Espaciado uniforme entre elementos */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Por defecto, se muestra horizontal */
+}
+
+.menu-list li {
+  margin: 0; /* Elimina márgenes redundantes */
+}
+
+.menu-list li a {
+  color: #ffffff; /* Color de los enlaces */
+  text-decoration: none;
+  padding: 0.5rem 1rem; /* Área clicable más amplia */
+}
+
+.menu-list li a:hover {
+  background: rgba(30, 52, 99, 0.2); /* Fondo al pasar el mouse */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none; /* Oculto en pantallas grandes */
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-list {
+    display: none; /* Ocultar menú por defecto */
+    flex-direction: column; /* Mostrar elementos en columna */
+    position: absolute;
+    top: 100%; /* Posición debajo del header */
+    left: 0;
+    background-color: var(--color-header); /* Fondo del menú desplegable */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  }
+
+  .menu-list.show {
+    display: flex; /* Mostrar el menú cuando está activo */
+  }
+
+  .menu-toggle {
+    display: block; /* Mostrar el botón hamburguesa */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Espacio para evitar superposición */
+  }
+}
+
+
+      
+
+    
+
+/*----------------------------------------------------------------------*/
+
+main{
+    font-family: var(--fuente-minuscula);
+    background-color: var(--color-main);
+    color: black;
+    h1{
+        font-size: 4rem;
+        padding-bottom: 5px;
+        padding-top: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        .btn-primary {
+            color: #ffffff;
+            background-color: #880d1e;
+            border-color: #880d1e;
+        }
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #ff5a5f;
+            border-color: #ff5a5f;
+         }
+          
+    }
+
+}
+.fondoDeCopas{
+  width: 100%;
+  background-image:url(../assets/img/fondo_header.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-position:center center;
+}
+.fondoBorroso{
+  
+        border-radius: 50px;
+        color: rgba(207, 205, 205, 0.753);
+        background: #f1eff083;
+    
+
+}
+
+.tituloMayor{
+  font-size: 5rem;
+  color:black;
+
+}
+
+.subtexto{
+  font-size: 2rem;
+  color: black;
+}
+
+.subtituloMedio{
+  font-size: 3rem;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.textoNegro{
+  color: black;
+  text-align: justify;
+}
+.margenesSection{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card {
+    border-width: 5px; 
+    border-radius: 10px;
+    border-color: #13315c;
+}
+
+.hDosDestacados{
+    text-align: center;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------------------------*/
+footer{
+    background-color:var(--color-footer);
+    font-family: var(--fuente-minuscula);
+    font-size: 1rem;
+    color: white;
+    img{
+        width:10rem;
+    }
+}
+
+.emailFooter {
+    width: 30px; 
+    height: auto; 
+    transition: transform 0.3s ease;
+}
+
+.emailFooter:hover {
+    transform: scale(1.2); 
+}
+
+.fa-whatsapp{
+    text-decoration: none;
+    font-size: 30px;
+    color: #25D366; 
+    transition: color 0.3s ease;
+}
+.fa-whatsapp:hover {
+    color: #128C7E;
+}
+
+.fa-facebook{
+    text-decoration: none;
+    font-size: 30px;
+    color: #1877F2; 
+    transition: color 0.3s ease;
+}
+.fa-facebook:hover {
+    color: #3b5998;
+}   
+
+.fa-instagram{
+    font-size: 30px;
+    background: linear-gradient(45deg, #F58529, #E4405F, #8A3AB9, #F7B731); /* Degradado de Instagram */
+    background-clip: text; /* Necesario para aplicar el degradado solo al texto */
+    color: transparent;
+
+} 
+
+/*boton footer*/
+.btn-primary {
+  color: #fff;
+  background-color: #880d1e;
+  border-color: #880d1e;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #ff5a5f;
+  border-color: #ff5a5f;
+}
+
+/*---------------------------------------------------------------------*/
+
+/*Opciones*/
+.card-group > .card {           /* Espaciado uniforme */
+    flex: 0 0 10rem;          /* Tamaño fijo */
+    max-width: 10rem;         /* Limita el ancho máximo */
+    border: 2px solid #13315c; /* Bordes visibles */
+    border-radius: 1rem;      /* Bordes redondeados */
+    overflow: hidden;         /* Asegura que el contenido respete el borde */
+  }
+  
+  .card-group > .card img {
+    border-radius: 1rem;      /* Aplica bordes redondeados a las imágenes */
+    width: 100%;              /* Asegura que las imágenes se ajusten a la tarjeta */
+    height: auto;             /* Mantiene la proporción */
+  }
+  
+  @media (min-width: 576px) {
+    .card-group {
+      display: flex;
+      flex-wrap: wrap;        /* Permite que las tarjetas se ajusten automáticamente */
+      justify-content: center; /* Centra las tarjetas */
+    }
+    .card-group > .card {
+      flex: 0 0 calc(25% - 1rem); /* Cuatro tarjetas por fila con separación */
+      max-width: calc(25% - 1rem);
+      margin: 1.2rem;           /* Espaciado entre tarjetas */
+      border: 2px solid #13315c;
+      border-radius: 1rem;
+      overflow: hidden;       /* Asegura que el contenido respete el borde */
+    }
+    .card-group > .card img {
+      border-radius: 1rem;    /* Aplica bordes redondeados a las imágenes también en pantallas grandes */
+    }
+  }
+  
+.margenFormulario{
+  margin: 50px;
+}
